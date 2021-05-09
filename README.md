@@ -178,6 +178,18 @@ ng serve
 # in a new console tab
 yarn start
 ```
+ **Problems running the dev server**
+
+ If you encounter the error below when running `ng serve`, re-installing @angular/cli using `npm` might help.
+```
+"You have to be inside an angular-cli project in order to use the serve command"
+```
+Re-installing @angular/cli:
+```
+npm uninstall -g angular-cli @angular/cli
+npm cache clean --force
+npm install -g @angular/cli
+```
 
 ### Packaging the app
 Packaging the app is done via [electron-builder](https://github.com/electron-userland/electron-builder). To start packaging run `yarn dist`. If you want to add new platforms and experiment with the build options the easiest way to do so is manipulating the `build` property in the [package.json](https://github.com/johannesjo/super-productivity/blob/develop/package.json), but you can also use the [command line interface of electron builder](https://www.electron.build/cli).
